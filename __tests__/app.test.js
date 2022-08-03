@@ -37,7 +37,7 @@ describe('books/authors route', () => {
     const ray_dalio = {
       id: '1',
       name: 'Ray Dalio',
-      dob: '05-05-1968',
+      dob: '5/5/1968',
       pob: 'Homie, Oregon',
     };
     expect(res.body).toEqual(ray_dalio);
