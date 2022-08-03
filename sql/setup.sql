@@ -20,7 +20,7 @@ CREATE TABLE bookAuthor (
     book_id BIGINT,
     author_id BIGINT,
     FOREIGN KEY (book_id) REFERENCES books(id), 
-    FOREIGN KEY (author_id) REFERENCES authors(id), 
+    FOREIGN KEY (author_id) REFERENCES authors(id)
 );
 
 
@@ -48,11 +48,23 @@ VALUES
 ('Jill Schlesinger', '6-11-1994', 'Spokane, Washington'),
 ('Bob Sled', '8-6-1993', 'Dayton, Ohio'),
 ('Edward Snowden', '1-1-2001', 'Clearwater, Florida'),
-('Damian Lillard', '2-5-1996', 'Oakland, Claifornia')
+('Damian Lillard', '2-5-1996', 'Oakland, Claifornia'),
+('Thomas', '6-5-1952', 'Junpiter, Idaho')
 ;
 
 INSERT INTO bookAuthor (
-    
-)                        
+    book_id,
+    author_id
+)
+    VALUES
+    (1, 1),
+    (2, 2),
+    (3, 3), 
+    (4, 4), 
+    (5, 5), 
+    (6, 6)
+    ;
+
+
 
 
