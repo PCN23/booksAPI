@@ -19,8 +19,8 @@ describe('books route', () => {
     console.log(res.body);
     const principles = {
       id: '1',
-      name: 'Principles',
-      released: 2009,
+      title: 'Principles',
+      released: '2009',
     };
     expect(res.body).toEqual(principles);
   });
