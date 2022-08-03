@@ -14,16 +14,16 @@ describe('books route', () => {
     console.log(res);
   });
 
-  // it('/books/:id should return book detail', async () => {
-  //   const res = await request(app).get('/books/1');
-  //   console.log(res.body);
-  //   const principles = {
-  //     id: '1',
-  //     name: 'Principles',
-  //     released: 2009
-  //   };
-  //   expect(res.body).toEqual(principles);
-  // });
+  it('/books/:id should return book detail', async () => {
+    const res = await request(app).get('/books/1');
+    console.log(res.body);
+    const principles = {
+      id: '1',
+      name: 'Principles',
+      released: 2009,
+    };
+    expect(res.body).toEqual(principles);
+  });
 
   afterAll(() => {
     pool.end();
