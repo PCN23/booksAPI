@@ -4,7 +4,7 @@ const setup = require('../data/setup');
 const request = require('supertest');
 const app = require('../lib/app');
 
-describe('books route', () => {
+describe('books/authors route', () => {
   beforeEach(() => {
     return setup(pool);
   });
@@ -24,6 +24,13 @@ describe('books route', () => {
     };
     expect(res.body).toEqual(principles);
   });
+
+  it('should return an author', async () => {
+    const res = await request(app).get('/authors');
+    expect(res.body.length).toEqual(1);
+    console.log(res);
+  });
+  
 
   afterAll(() => {
     pool.end();
