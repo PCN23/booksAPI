@@ -15,6 +15,14 @@ CREATE TABLE authors (
     dob DATE,
     pob VARCHAR
 );
+CREATE TABLE bookAuthor (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    book_id BIGINT,
+    author_id BIGINT,
+    FOREIGN KEY (book_id) REFERENCES books(id), 
+    FOREIGN KEY (author_id) REFERENCES authors(id), 
+);
+
 
 INSERT INTO books (
     title,
@@ -42,3 +50,9 @@ VALUES
 ('Edward Snowden', '1-1-2001', 'Clearwater, Florida'),
 ('Damian Lillard', '2-5-1996', 'Oakland, Claifornia')
 ;
+
+INSERT INTO bookAuthor (
+    
+)                        
+
+
