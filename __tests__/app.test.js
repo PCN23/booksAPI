@@ -30,6 +30,18 @@ describe('books/authors route', () => {
     expect(res.body.length).toEqual(5);
     console.log(res);
   });
+
+  it('/authors/:id should return author detail', async () => {
+    const res = await request(app).get('/authors/1');
+    console.log(res.body);
+    const ray_dalio = {
+      id: '1',
+      name: 'Ray Dalio',
+      dob: '05-05-1968',
+      pob: 'Homie, Oregon',
+    };
+    expect(res.body).toEqual(ray_dalio);
+  });
   
 
   afterAll(() => {
