@@ -25,9 +25,9 @@ describe('books/authors route', () => {
     expect(res.body).toEqual(principles);
   });
 
-  it('should return an author', async () => {
+  it('should return a list of author', async () => {
     const res = await request(app).get('/authors');
-    expect(res.body.length).toEqual(1);
+    expect(res.body.length).toEqual(5);
     console.log(res);
   });
   

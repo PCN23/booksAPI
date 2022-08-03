@@ -36,5 +36,9 @@ INSERT INTO authors (
 )
 
 VALUES 
-('Ray Dalio', '05-05-1968', 'Homie, Oregon' )
+('Ray Dalio', '05-05-1968', 'Homie, Oregon'),
+('Jill Schlesinger', '06-11-1994', 'Spokane, Washington'),
+('Bob Sled', '08-06-1993', 'Dayton, Ohio'),
+('Edward Snowden', '01-01-2001', 'Clearwater, Florida'),
+('Damian Lillard', '02-05-1996', 'Oakland, Claifornia')
 ;
