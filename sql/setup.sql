@@ -8,12 +8,12 @@ CREATE TABLE books (
     released BIGINT
 );
 
--- CREATE TABLE author (
---     id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
---     name VARCHAR,
---     dob DATE,
---     pob VARCHAR
--- );
+CREATE TABLE author (
+    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR,
+    dob DATE,
+    pob VARCHAR
+);
 
 INSERT INTO books (
     title,
@@ -26,4 +26,14 @@ VALUES
 ('Hoop like James', '2003'),
 ('Legends are never gone', '2012'),
 ('Soccer', '2003')
+;
+
+INSERT INTO author (
+    name, 
+    bod,
+    pob
+)
+
+VALUES 
+('Ray Dalio', '05-05-1968', 'Homie, Oregon' )
 ;
