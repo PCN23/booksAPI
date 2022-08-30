@@ -43,7 +43,7 @@ describe('books/authors route', () => {
     };
     expect(res.body).toEqual(ray_dalio);
   });
-  it.only('should add a new book', async () => {
+  it('should add a new book', async () => {
     const book = {
       title: 'Harry potter and the homies',
       released: '2029',
@@ -52,6 +52,18 @@ describe('books/authors route', () => {
     const res = await request(app).post('/books').send(book);
     expect(res.body.title).toEqual(book.title);
     expect(res.body.released).toEqual(book.released);
+  });
+  it('should add a new author', async () => {
+    const author = {
+      name: 'Don Julio',
+      dob: '6/6/2029',
+      pob: 'Hawaii'
+      
+    };
+    const res = await request(app).post('/authors').send(author);
+    expect(res.body.name).toEqual(author.name);
+    expect(res.body.dob).toEqual(author.dob);
+    expect(res.body.pob).toEqual(author.pob);
   });
   
 
