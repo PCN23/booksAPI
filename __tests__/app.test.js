@@ -3,6 +3,7 @@ const setup = require('../data/setup');
 //const { request } = require('express');
 const request = require('supertest');
 const app = require('../lib/app');
+const Book = require('../lib/models/Book');
 
 describe('books/authors route', () => {
   beforeEach(() => {
@@ -41,6 +42,16 @@ describe('books/authors route', () => {
       pob: 'Homie, Oregon',
     };
     expect(res.body).toEqual(ray_dalio);
+  });
+  it.only('should add a new book', async () => {
+    const book = {
+      title: 'Harry potter and the homies',
+      released: '2029',
+      
+    };
+    const res = await request(app).post('/books').send(book);
+    expect(res.body.title).toEqual(book.title);
+    expect(res.body.released).toEqual(book.released);
   });
   
 
